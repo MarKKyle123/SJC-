@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Saint Joseph College Home page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .header img {
+      max-width: 150px;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      color: green;
+      font-size: 25px;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .navbar a {
+      color: green;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .navbar a:hover {
+      background-color: lightgray;
+    }
+
+    /* Slideshow Styling */
+    .slideshow-container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slides {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; /* Hide images by default */
+    }
+
+    /* Body reset for full-screen slideshow */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Disable horizontal scrolling */
+      overflow-y: auto;   /* Enable vertical scrolling */
+    }
+
+/* Footer Styling */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Align items vertically centered */
+  font-size: 18px;
+}
+
+footer img {
+  width: 100px;
+  margin-left: 20px; /* Add space between text and image */
+}
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section with Logo and School Name -->
+  <div class="header">
+    <img title="SJC Logo" alt="SJC Logo" src="image/Newlogo.png" class="logo">
+    <div>
+      <h1>Saint Joseph College, <br> Maasin City Southern Leyte</h1>
+      <p>God, Country, Knowledge</p>
+    </div>
+  </div>
+
+  <!-- Navbar Section -->
+  <div class="navbar">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">ADMISSION</a>
+    <a href="#">INQUIRE</a>
+  </div>
+
+  <!-- Slideshow Container -->
+  <div class="slideshow-container">
+    <img class="slides" src="image/enrollnursing.jfif" alt="Slide 1">
+    <img class="slides" src="image/pre.jpg" alt="Slide 2">
+    <img class="slides" src="image/science.jpg" alt="Slide 3">
+    <img class="slides" src="image/civil.jpg" alt="Slide 4">
+    <img class="slides" src="image/certificate.jpg" alt="Slide 5">
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    Saint Joseph College<br>
+    Brgy. Tunga-tunga, Maasin City, Southern Leyte, Philippines, 6600<br>
+    Trunk Line: (053) 570-8448 | Local: 116 - Front Desk | Fax: (053) 381-2283<br>
+    Email: <a href="mailto:info@sjc.edu.ph">info@sjc.edu.ph</a><br>
+    Facebook Accounts: Research, UJER, IJMERI<br>
+    Links: SJC Library, SJC Webmail, Careers, Privacy Policy, Contact Us<br>
+    <img src="image/npcseal.png" alt="NPC Seal">
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+
+</html>
